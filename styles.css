@@ -97,7 +97,7 @@ body {
     padding: 20px;
 }
 
-/* Main column */
+/* Main */
 
 .main {
     z-index: 1;
@@ -108,7 +108,7 @@ body {
 }
 
 .movies {
-    margin-top: 20px;
+    margin-top: 10px;
     z-index: 1;
     background: white;
     position: relative;
