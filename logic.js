@@ -21,6 +21,7 @@ function loadJSON(callback) {
 }
 
 function init() {
+    console.log('ddf');
     loadJSON(function (response) {
         // Parse JSON string into object
         var actual_JSON = JSON.parse(response);
