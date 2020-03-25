@@ -100,6 +100,14 @@ body {
 /* Main column */
 
 .main {
+    z-index: 1;
+    background: white;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+.main {
     margin-top: 20px;
     z-index: 1;
     background: white;
