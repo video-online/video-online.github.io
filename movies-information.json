@@ -12,4 +12,17 @@
         "isDubbed": true,
         "isFavorite": false
     }
+    {
+        "id": 1,
+        "name": "",
+        "year": "2019",
+        "cover": "http://placehold.it/32x32",
+        "URL": "http://placehold.it/32x32",
+        "brief": "http://placehold.it/32x32",
+        "trailer": "http://placehold.it/32x32",
+        "rate": "",
+        "genere": "",
+        "isDubbed": true,
+        "isFavorite": false
+    }
 ]
