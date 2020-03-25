@@ -1,63 +1,351 @@
-<html><head>
-    <title>AK Movie</title>
-    <style>
-        body {
-            margin:0px;
-            background:#333;
-        }
-    </style>
-<script src="moz-extension://51d9e3dd-8773-4c58-9aae-9bc987749184/assets/prompt.js"></script><style type="text/css">@font-face{
-font-family: 'bnazanin';
-src:'./../../fonts/bnazanin.ttf';
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.dideo-tooltip {
-position: relative;
-display: inline-block;
-font-family: 'bnazanin';
-font-size: 0;
-padding: 3px 5px;
-}
+<head>
+    <title>AK Movie Pro</title>
+    <meta charset="UTF-8">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/brands.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/fontawesome.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/regular.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/fontawesome.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/solid.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/svg-with-js.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/v4-shims.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="persianNum.jquery-2.js"></script>
+    <script type="text/javascript" src="logic.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
 
-.dideo-tooltip .tooltiptext {
-visibility: hidden;
-font-family: 'bnazanin';
-width: 120px;
-font-size: 13px;
-background-color: black;
-color: #fff;
-text-align: center;
-border-radius: 6px;
-padding: 5px 0;
-position: absolute;
-z-index: 1;
-top: 0px;
-left: 110%;
-}
-.dideo-img{
-width: 18px;
-height: 18px;
-margin-bottom: -3px;
-filter: drop-shadow(0px 0px 2px #adadad);
-webkit:filter: drop-shadow(0px 0px 2px #adadad);
-}
-.dideo-tooltip .tooltiptext::after {
-content: "";
-position: absolute;
-top: 50%;
-right: 100%;
-margin-top: -5px;
-border-width: 5px;
-border-style: solid;
-border-color: transparent black transparent transparent;
-}
-.dideo-tooltip:hover .tooltiptext {
-visibility: visible;
-}
-.srg{
-min-width: 750px;
-}</style></head>
 <body>
-        <video src="http://s7.dlrozane.net/dlroozane/98/10/Togo.2019.1080p.Farsi.Dubbed.mkv" style="width:100%;height:100%" poster="https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg" controls=""></video>
 
-</body></html>
+
+    <video autoplay muted loop id="backVideo">
+        <source src="marshup.mp4" type="video/mp4">
+    </video>
+    <div class="content center-text">
+        <h1 style="font-family: timberline; font-size: 55px;">AK Movie Pro</h1>
+        <p style="margin-top: -60px; font-size: 17px;">فیلیمو رو فراموش کن</p>
+    </div>
+
+    <div class="context">
+        <div class="navbar center persian">
+            <a href="#">مامان</a>
+            <a href="#">بابا</a>
+            <a href="#">پریا</a>
+            <a href="#">آبجی</a>
+            <a href="#">هلن و ماهان</a>
+            <div class="dropdown persian">
+                <button class="dropbtn">سریال
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content center">
+                    <div class="header">
+                        <h2>سریال های با حال</h2>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <h3 class="center">مرد خانواده</h3>
+                            <a href="#">فصل 1</a>
+                            <a href="#">فصل 2</a>
+                            <a href="#">فصل 3</a>
+                            <a href="#">فصل 4</a>
+                            <a href="#">فصل 5</a>
+                            <a href="#">فصل 6</a>
+                        </div>
+                        <div class="column">
+                            <h3 class="center">بازی تاج و تخت</h3>
+                            <a href="#">فصل 1</a>
+                            <a href="#">فصل 2</a>
+                            <a href="#">فصل 3</a>
+                            <a href="#">فصل 4</a>
+                            <a href="#">فصل 5</a>
+                            <a href="#">فصل 6</a>
+                        </div>
+                        <div class="column">
+                            <h3 class="center">پایتخت</h3>
+                            <a href="#">پایتخت ۶</a>
+                            <a href="#">پایتخت ۵</a>
+                            <a href="#">پایتخت ۴</a>
+                            <a href="#">پایتخت ۳</a>
+                            <a href="#">پایتخت ۲</a>
+                            <a href="#">پایتخت ۱</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown persian">
+                <button class="dropbtn">ژانر
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content center">
+                    <div class="header">
+                        <h2>ژانر های خفن</h2>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <a href="#">اکشن</a>
+                        </div>
+                        <div class="column">
+                            <a href="#">علمی - تخیلی</a>
+                        </div>
+                        <div class="column">
+                            <a href="#">کمدی</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="main center">
+
+                <!-- Movie Card -->
+                <script>
+                    function togoMovie() {
+                        var myWindow = window.open("MOVIE");
+                        myWindow.document.write('<title>AK Movie</title><video src="http://s7.dlrozane.net/dlroozane/98/10/Togo.2019.1080p.Farsi.Dubbed.mkv" style="width:100%;height:100%" poster="https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg" controls=""></video>');
+                    }
+                </script>
+                <div class="card persian" onclick="togoMovie()">
+                    <img src="https://dlroozane.net/wp-content/uploads/2020/01/Togo.jpg" class="movie-cover">
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>خلاصه داستان</h3>
+                            <hr>
+                            <h4>
+                                این فیلم داستان یک سگ سورتمه‌ای به نام توگو را به تصویر می‌کشد که هدایت یک گروه از سگ‌ها
+                                را در دهه‌ی بیست میلادی بر عهده دارد ، اما اکثر افراد هدایت چنین سگ کوچک و ضعیفی را
+                                باورنکردنی می‌دانند و…
+                            </h4>
+                            <hr>
+                            <button class="card-button trailer-button">
+                                تریلر
+                                <i class="fas fa-film button-icon-with-text"></i>
+                            </button>
+                            <button class="card-button favorite-button">
+                                <i class="far fa-heart button-icon-without-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="container center-text">
+                        <h4><b>توگو</b></h4>
+                        <h4>دوبله - 8.2 - 1080p</h4>
+                        <h4>ماجراجویی | درام</h4>
+                    </div>
+                </div>
+
+                <!-- Movie Card -->
+                <script>
+                    function openWin() {
+                        var myWindow = window.open("MOVIE");
+                        myWindow.document.write('<title>AK Movie</title><video src="http://s7.dlrozane.net/dlroozane/98/12/Sonic.the.Hedgehog.2020.1080p.Farsi.Dubbed.mkv" style="width:100%;height:100%" poster="https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg" controls=""></video>');
+                    }
+                </script>
+                <div class="card persian" onclick="openWin()">
+                    <img src="https://dlroozane.net/wp-content/uploads/2019/11/Sonic.jpg" class="movie-cover">
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>خلاصه داستان</h3>
+                            <hr>
+                            <h4>
+                                یک پلیس ماجراجو به نام تام در شهری خوش آب و هوا در گرین هیلز به موجودی عجیب و
+                                غریب به نام سونیک برای فرار از دست افرادی خبیث که به دنبال او هستند کمک می‌کند و…
+                            </h4>
+                            <hr>
+                            <button class="card-button trailer-button">
+                                تریلر
+                                <i class="fas fa-film button-icon-with-text"></i>
+                            </button>
+                            <button class="card-button favorite-button">
+                                <i class="far fa-heart button-icon-without-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="container center-text">
+                        <h4><b>سونیک خارپشت 2020</b></h4>
+                        <h4>دوبله - 7.1 - 1080p</h4>
+                        <h4>اکشن | ماجراجویی</h4>
+                    </div>
+                </div>
+
+
+                <!-- Movie Card -->
+                <div class="card persian" onclick="openWin()">
+                    <img src="https://dlroozane.net/wp-content/uploads/2019/12/Star-Wars-The-Rise-of-Skywalker.jpg"
+                        class="movie-cover">
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>خلاصه داستان</h3>
+                            <hr>
+                            <h4>
+                                داستان قسمت نهم یک سال پس از اتفاقات قسمت هشتم فیلم یعنی آخرین جدای رخ می‌دهد
+                                و ادامه‌ی ماجراجویی ری و گروهش را دنبال می‌کند که…
+                            </h4>
+                            <hr>
+                            <button class="card-button trailer-button">
+                                تریلر
+                                <i class="fas fa-film button-icon-with-text"></i>
+                            </button>
+                            <button class="card-button favorite-button">
+                                <i class="far fa-heart button-icon-without-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="container center-text">
+                        <h4><b>جنگ ستارگان 9 خیزش اسکای واکر 2019</b></h4>
+                        <h4>دوبله - 5.9 - 1080p</h4>
+                        <h4>اکشن | جنایی | هیجان انگیز</h4>
+                    </div>
+                </div>
+                <script>
+                    function openWin() {
+                        var myWindow = window.open("MOVIE");
+                        myWindow.document.write('<title>AK Movie</title><video src="http://s7.dlrozane.net/dlroozane/98/12/Star.Wars.The.Rise.of.Skywalker.2020.1080p.Farsi.Dubbed.mkv" style="width:100%;height:100%" poster="https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg" controls=""></video>');
+                    }
+                </script>
+
+
+                <!-- Movie Card -->
+                <div class="card persian" onclick="openWin()">
+                    <img src="https://dlroozane.net/wp-content/uploads/2020/03/Jexi.jpg" class="movie-cover">
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>خلاصه داستان</h3>
+                            <hr>
+                            <h4>
+                                داستان کمدی درباره شخصی که گوشی موبایلش را بیش از هرچیز دیگری دوست دارد…
+                            </h4>
+                            <hr>
+                            <button class="card-button trailer-button">
+                                تریلر
+                                <i class="fas fa-film button-icon-with-text"></i>
+                            </button>
+                            <button class="card-button favorite-button">
+                                <i class="far fa-heart button-icon-without-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="container center-text">
+                        <h4><b>جکسی 2019</b></h4>
+                        <h4>دوبله - 6.1 - 1080p</h4>
+                        <h4>کمدی</h4>
+                    </div>
+                </div>
+                <script>
+                    function openWin() {
+                        var myWindow = window.open("MOVIE");
+                        myWindow.document.write('<title>AK Movie</title><video src="http://s7.dlrozane.net/dlroozane/98/12/Jexi.2019.1080p.Farsi.Dubbed.mkv" style="width:100%;height:100%" poster="https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg" controls=""></video>');
+                    }
+                </script>
+
+                <!-- Movie Card -->
+                <div class="card persian" onclick="openWin()">
+                    <img src="https://dlroozane.net/wp-content/uploads/2020/03/Richard-Jewell.jpg" class="movie-cover">
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>خلاصه داستان</h3>
+                            <hr>
+                            <h4>
+                                داستان یک نگهبان امنیتی به نام ریچارد جول را به تصویر می‌کشد که در بمب‌گذاری
+                                المپیک آتلانتا جان انسان‌های زیادی را نجات داد ، اما چند روز پس از این اتفاق متهم به
+                                انجام
+                                این بمب‌گذاری شد و…
+                            </h4>
+                            <hr>
+                            <button class="card-button trailer-button">
+                                تریلر
+                                <i class="fas fa-film button-icon-with-text"></i>
+                            </button>
+                            <button class="card-button favorite-button">
+                                <i class="far fa-heart button-icon-without-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="container center-text">
+                        <h4><b>ریچارد جول 2019</b></h4>
+                        <h4>دوبله - 7.5 - 1080p</h4>
+                        <h4>بیوگرافی | جنایی | درام</h4>
+                    </div>
+                </div>
+                <script>
+                    function openWin() {
+                        var myWindow = window.open("MOVIE");
+                        myWindow.document.write('<title>AK Movie</title><video src="http://s7.dlrozane.net/dlroozane/98/12/Richard.Jewell.2019.1080p.darsi.Dubbed.mkv" style="width:100%;height:100%" poster="https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg" controls=""></video>');
+                    }
+                </script>
+
+                <!-- Movie Card -->
+                <div class="card persian" onclick="openWin()">
+                    <img src="https://dlroozane.net/wp-content/uploads/2020/03/Trouble.jpg" class="movie-cover">
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>خلاصه داستان</h3>
+                            <hr>
+                            <h4>
+                                درباره سگی با نام “دردسر” می باشد که باید یاد بگیرد که در دنیای واقعی زندگی
+                                کند …
+                            </h4>
+                            <hr>
+                            <button class="card-button trailer-button">
+                                تریلر
+                                <i class="fas fa-film button-icon-with-text"></i>
+                            </button>
+                            <button class="card-button favorite-button">
+                                <i class="far fa-heart button-icon-without-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="container center-text">
+                        <h4><b>Trouble 2019</b></h4>
+                        <h4>دوبله - 6.4 - 1080p</h4>
+                        <h4> انیمیشن | کمدی</h4>
+                    </div>
+                </div>
+                <script>
+                    function openWin() {
+                        var myWindow = window.open("MOVIE");
+                        myWindow.document.write('<title>AK Movie</title><video src="http://s7.dlrozane.net/dlroozane/99/01/Trouble.2019.1080p.Farsi.Dubbed.mkv" style="width:100%;height:100%" poster="https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg" controls=""></video>');
+                    }
+                </script>
+
+
+                <!-- Movie Card -->
+                <div class="card persian" onclick="openWin()">
+                    <img src="https://dlroozane.net/wp-content/uploads/2018/04/Paytakht-6.jpg" class="movie-cover">
+                    <div class="overlay">
+                        <div class="text"></div>
+                    </div>
+                    <div class="container center-text">
+                        <h4><b>پایتخت 6</b></h4>
+                        <h4>قسمت 5</h4>
+                        <h4>طنز - اجتماعی</h4>
+                    </div>
+                </div>
+                <script>
+                    function openWin() {
+                        var myWindow = window.open("MOVIE");
+                        myWindow.document.write('<title>AK Movie</title><video src="http://s7.dlrozane.net/dlroozane/98/Paytakht6/Paytakht.S06E05.1080p.HDTV.mkv" style="width:100%;height:100%" poster="https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg" controls=""></video>');
+                    }
+                </script>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- <div class="footer">
+        <h2>Footer</h2>
+    </div> -->
+
+
+    <script>
+        $(document).ready(function () {
+            $('body').persianNum();
+        })
+    </script>
+</body>
+
+</html>

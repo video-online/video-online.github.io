@@ -1,30 +1,24 @@
-var script = document.createElement('script');
-script.src = 'https://code.jquery.com/jquery-3.2.1.min.js';
-document.getElementsByTagName('head')[0].appendChild(script);
+var movies;
 
-$.getJSON( "movies-information.json", function( data ) {
-    console.log(JSON.parse(data));
-    console.log('data');
-  });
+function loadJSON(callback) {
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'movies-information.json', true);
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            callback(xobj.responseText);
+        }
+    };
+    xobj.send(null);
+}
 
-// function loadJSON(callback) {
-//     var xobj = new XMLHttpRequest();
-//     xobj.overrideMimeType("application/json");
-//     xobj.open('GET', 'movies-information.json', true);
-//     xobj.onreadystatechange = function () {
-//         if (xobj.readyState == 4 && xobj.status == "200") {
-//             callback(xobj.responseText);
-//         }
-//     };
-//     xobj.send(null);
-// }
-// function init() {
-//     loadJSON(function (response) {
-//         var actual_JSON = JSON.parse(response);
-//         console.log(actual_JSON);
-//     });
-// }
-// loadJSON(init)
+function init() {
+    loadJSON(function (response) {
+        movies = JSON.parse(response);
+    });
+}
+loadJSON(init)
+console.log(movies);
 
 function openWin(movieURL, posterURL = "https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg") {
     var myWindow = window.open("MOVIE");
