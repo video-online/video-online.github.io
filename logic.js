@@ -10,7 +10,7 @@ function loadJSON(callback) {
     xobj.send(null);
 }
 
-function movieExtractor() {
+function movieExtractor(response) {
     var movies = JSON.parse(response);
     console.log(movies);
     for (var i = 0; i < movies.length; i++) {
@@ -27,5 +27,4 @@ function openWin(movieURL, posterURL = "https://inspirecast.ca/wp-content/upload
 }
 
 
-loadJSON(movieExtractor)
-console.log(movies);
+loadJSON(movieExtractor);
