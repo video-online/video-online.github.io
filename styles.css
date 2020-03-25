@@ -9,7 +9,12 @@
 }
 
 h4 {
+    margin: 7px !important;
+}
+
+h5 {
     margin: 5px !important;
+    font-size: 15px;
 }
 
 * {
@@ -346,5 +351,5 @@ body {
 }
 
 .movie-name{
-    color: midnightblue;
+    color: rgb(24, 37, 0);
 }
