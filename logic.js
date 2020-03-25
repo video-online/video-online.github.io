@@ -4,6 +4,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 $.getJSON( "movies-information.json", function( data ) {
     console.log(data);
+    console.log('data');
   });
 
 // function loadJSON(callback) {
