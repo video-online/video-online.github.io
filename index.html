@@ -4,9 +4,18 @@
 <head>
     <title>AK Movie Pro</title>
     <meta charset="UTF-8">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/brands.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/fontawesome.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/regular.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/fontawesome.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/solid.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/svg-with-js.min.css" rel="stylesheet">
+    <link href="https://lib.arvancloud.com/ar/font-awesome/5.9.0/css/v4-shims.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="persianNum.jquery-2.js"></script>
+    <script type="text/javascript" src="logic.js"></script>
     <style>
         @font-face {
             font-family: iransans;
@@ -18,7 +27,7 @@
             src: url(timberline.woff2)
         }
 
-        h4{
+        h4 {
             margin: 5px !important;
         }
 
@@ -53,6 +62,7 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            font-size: 18px;
         }
 
         /* Right-aligned link */
@@ -70,7 +80,6 @@
         /* Change color on hover */
         .navbar a:hover {
             background-color: #ddd;
-            color: black;
         }
 
         /* Column container */
@@ -137,7 +146,7 @@
             position: relative;
             right: 0;
             bottom: 0;
-            margin-top: -100px;
+            margin-top: -110px;
             margin-bottom: -20px;
             min-width: 100%;
             min-height: 100%;
@@ -145,12 +154,12 @@
         }
 
         .context {
-            margin-top: -87px;
+            margin-top: -100px;
         }
 
         .content {
             position: absolute;
-            margin-top: -310px;
+            margin-top: -320px;
             color: #f1f1f1;
             width: 100%;
             padding: 20px;
@@ -257,6 +266,10 @@
             padding: 2px 16px;
         }
 
+        .container h4 {
+            font-size: 19px;
+        }
+
         .center-text {
             text-align: center;
         }
@@ -275,8 +288,8 @@
             height: 100%;
             width: 100%;
             opacity: 0;
-            transition: .5s ease;
-            background-color: rgb(45, 48, 0);
+            transition: 1s ease;
+            background-color: rgba(0, 0, 0, 0.90);
         }
 
         .card:hover .overlay {
@@ -294,6 +307,42 @@
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             text-align: center;
+        }
+
+        .card-button {
+            border-radius: 5px;
+            border: none;
+            color: white;
+            z-index: 10;
+            position: relative;
+            padding: 5px;
+            margin-top: 30px;
+            font-family: iransans;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+        }
+
+        .button-icon-with-text {
+            font-size: 21px;
+            margin-right: 8px;
+            vertical-align: sub;
+        }
+
+        .button-icon-without-text {
+            font-size: 20px;
+            vertical-align: sub;
+        }
+
+        .trailer-button {
+            background-color: rgb(5, 145, 0);
+            width: 90px;
+        }
+
+        .favorite-button {
+            background-color: rgb(221, 21, 6);
+            width: 40px;
         }
     </style>
 </head>
@@ -315,6 +364,7 @@
             <a href="#">بابا</a>
             <a href="#">پریا</a>
             <a href="#">آبجی</a>
+            <a href="#">هلن و ماهان</a>
             <div class="dropdown persian">
                 <button class="dropbtn">سریال
                     <i class="fa fa-caret-down"></i>
@@ -378,45 +428,34 @@
         </div>
 
         <div class="row">
-            <!-- SIDE -->
-            <!-- <div class="side">
-            <h2>About Me</h2>
-            <h5>Photo of me:</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-            <h3>More Text</h3>
-            <p>Lorem ipsum dolor sit ame.</p>
-            <div class="fakeimg" style="height:60px;">Image</div><br>
-            <div class="fakeimg" style="height:60px;">Image</div><br>
-            <div class="fakeimg" style="height:60px;">Image</div>
-        </div> -->
             <div class="main center">
 
                 <!-- Movie Card -->
-                <!-- <div class="card persian" onclick="openWin()">
-                    <img src="" class="movie-cover">
-                    <div class="overlay">
-                        <div class="text"></div>
-                    </div>
-                    <div class="container center-text">
-                        <h4><b></b></h4>
-                        <h4>دوبله -  - 1080p</h4>
-                    </div>
-                </div>
                 <script>
                     function openWin() {
                         var myWindow = window.open("MOVIE");
-                        myWindow.document.write('<title>AK Movie</title><video src="" style="width:100%;height:100%" poster="https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg" controls=""></video>');
+                        myWindow.document.write('<title>AK Movie</title><video src="http://s7.dlrozane.net/dlroozane/98/12/Sonic.the.Hedgehog.2020.1080p.Farsi.Dubbed.mkv" style="width:100%;height:100%" poster="https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg" controls=""></video>');
                     }
-                </script> -->
-
-
-                <!-- Movie Card -->
+                </script>
                 <div class="card persian" onclick="openWin()">
                     <img src="https://dlroozane.net/wp-content/uploads/2019/11/Sonic.jpg" class="movie-cover">
                     <div class="overlay">
-                        <div class="text">یک پلیس ماجراجو به نام تام در شهری خوش آب و هوا در گرین هیلز به موجودی عجیب و
-                            غریب به نام سونیک برای فرار از دست افرادی خبیث که به دنبال او هستند کمک می‌کند و…</div>
+                        <div class="text">
+                            <h3>خلاصه داستان</h3>
+                            <hr>
+                            <h4>
+                                یک پلیس ماجراجو به نام تام در شهری خوش آب و هوا در گرین هیلز به موجودی عجیب و
+                                غریب به نام سونیک برای فرار از دست افرادی خبیث که به دنبال او هستند کمک می‌کند و…
+                            </h4>
+                            <hr>
+                            <button class="card-button trailer-button">
+                                تریلر
+                                <i class="fas fa-film button-icon-with-text"></i>
+                            </button>
+                            <button class="card-button favorite-button">
+                                <i class="far fa-heart button-icon-without-text"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="container center-text">
                         <h4><b>سونیک خارپشت 2020</b></h4>
@@ -424,12 +463,6 @@
                         <h4>اکشن | ماجراجویی</h4>
                     </div>
                 </div>
-                <script>
-                    function openWin() {
-                        var myWindow = window.open("MOVIE");
-                        myWindow.document.write('<title>AK Movie</title><video src="http://s7.dlrozane.net/dlroozane/98/12/Sonic.the.Hedgehog.2020.1080p.Farsi.Dubbed.mkv" style="width:100%;height:100%" poster="https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg" controls=""></video>');
-                    }
-                </script>
 
 
                 <!-- Movie Card -->
@@ -437,7 +470,22 @@
                     <img src="https://dlroozane.net/wp-content/uploads/2019/12/Star-Wars-The-Rise-of-Skywalker.jpg"
                         class="movie-cover">
                     <div class="overlay">
-                        <div class="text">داستان قسمت نهم یک سال پس از اتفاقات قسمت هشتم فیلم یعنی آخرین جدای رخ می‌دهد و ادامه‌ی ماجراجویی ری و گروهش را دنبال می‌کند که…</div>
+                        <div class="text">
+                            <h3>خلاصه داستان</h3>
+                            <hr>
+                            <h4>
+                                داستان قسمت نهم یک سال پس از اتفاقات قسمت هشتم فیلم یعنی آخرین جدای رخ می‌دهد
+                                و ادامه‌ی ماجراجویی ری و گروهش را دنبال می‌کند که…
+                            </h4>
+                            <hr>
+                            <button class="card-button trailer-button">
+                                تریلر
+                                <i class="fas fa-film button-icon-with-text"></i>
+                            </button>
+                            <button class="card-button favorite-button">
+                                <i class="far fa-heart button-icon-without-text"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="container center-text">
                         <h4><b>جنگ ستارگان 9 خیزش اسکای واکر 2019</b></h4>
@@ -457,7 +505,21 @@
                 <div class="card persian" onclick="openWin()">
                     <img src="https://dlroozane.net/wp-content/uploads/2020/03/Jexi.jpg" class="movie-cover">
                     <div class="overlay">
-                        <div class="text">داستان کمدی درباره شخصی که گوشی موبایلش را بیش از هرچیز دیگری دوست دارد…</div>
+                        <div class="text">
+                            <h3>خلاصه داستان</h3>
+                            <hr>
+                            <h4>
+                                داستان کمدی درباره شخصی که گوشی موبایلش را بیش از هرچیز دیگری دوست دارد…
+                            </h4>
+                            <hr>
+                            <button class="card-button trailer-button">
+                                تریلر
+                                <i class="fas fa-film button-icon-with-text"></i>
+                            </button>
+                            <button class="card-button favorite-button">
+                                <i class="far fa-heart button-icon-without-text"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="container center-text">
                         <h4><b>جکسی 2019</b></h4>
@@ -476,7 +538,24 @@
                 <div class="card persian" onclick="openWin()">
                     <img src="https://dlroozane.net/wp-content/uploads/2020/03/Richard-Jewell.jpg" class="movie-cover">
                     <div class="overlay">
-                        <div class="text">داستان یک نگهبان امنیتی به نام ریچارد جول را به تصویر می‌کشد که در بمب‌گذاری المپیک آتلانتا جان انسان‌های زیادی را نجات داد ، اما چند روز پس از این اتفاق متهم به انجام این بمب‌گذاری شد و…</div>
+                        <div class="text">
+                            <h3>خلاصه داستان</h3>
+                            <hr>
+                            <h4>
+                                داستان یک نگهبان امنیتی به نام ریچارد جول را به تصویر می‌کشد که در بمب‌گذاری
+                                المپیک آتلانتا جان انسان‌های زیادی را نجات داد ، اما چند روز پس از این اتفاق متهم به
+                                انجام
+                                این بمب‌گذاری شد و…
+                            </h4>
+                            <hr>
+                            <button class="card-button trailer-button">
+                                تریلر
+                                <i class="fas fa-film button-icon-with-text"></i>
+                            </button>
+                            <button class="card-button favorite-button">
+                                <i class="far fa-heart button-icon-without-text"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="container center-text">
                         <h4><b>ریچارد جول 2019</b></h4>
@@ -495,7 +574,22 @@
                 <div class="card persian" onclick="openWin()">
                     <img src="https://dlroozane.net/wp-content/uploads/2020/03/Trouble.jpg" class="movie-cover">
                     <div class="overlay">
-                        <div class="text">درباره سگی با نام “دردسر” می باشد که باید یاد بگیرد که در دنیای واقعی زندگی کند …</div>
+                        <div class="text">
+                            <h3>خلاصه داستان</h3>
+                            <hr>
+                            <h4>
+                                درباره سگی با نام “دردسر” می باشد که باید یاد بگیرد که در دنیای واقعی زندگی
+                                کند …
+                            </h4>
+                            <hr>
+                            <button class="card-button trailer-button">
+                                تریلر
+                                <i class="fas fa-film button-icon-with-text"></i>
+                            </button>
+                            <button class="card-button favorite-button">
+                                <i class="far fa-heart button-icon-without-text"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="container center-text">
                         <h4><b>Trouble 2019</b></h4>
