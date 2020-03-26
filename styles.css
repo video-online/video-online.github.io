@@ -56,7 +56,7 @@ body {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 18px !important;
 }
 
 /* Right-aligned link */
@@ -134,7 +134,7 @@ body {
 /* Footer */
 
 .footer {
-    padding: 20px;
+    padding: 40px;
     text-align: center;
     background: #a5001f;
     color: wheat;
@@ -174,7 +174,7 @@ body {
 
 .content {
     position: absolute;
-    margin-top: -235px;
+    margin-top: -240px;
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
