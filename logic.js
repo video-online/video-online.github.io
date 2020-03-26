@@ -23,6 +23,7 @@ function movieExtractor(response) {
         $(".movies").append(movieCard);
     }
 
+    // <div class="ui modal ${movies[i].id}"><div class="header trailer-name">${movies[i].name}</div><video src="${movies[i].trailer}"style="width:100%;height:100%" controls=""></video></div>
     $(document).ready(function () {
         $('body').persianNum();
     })
