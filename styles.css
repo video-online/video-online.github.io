@@ -134,12 +134,14 @@ body {
 /* Footer */
 
 .footer {
-    padding: 30px;
+    padding: 35px;
+    font-size: 20px;
     text-align: center;
     background: #a5001f;
     color: wheat;
     box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, 0.2);
     z-index: 100;
+    position: relative;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
