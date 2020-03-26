@@ -138,6 +138,7 @@ body {
     text-align: center;
     background: #a5001f;
     color: wheat;
+    box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, 0.2);
     z-index: 100;
 }
 
