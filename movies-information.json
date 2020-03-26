@@ -298,5 +298,20 @@
         "isFavorite": false,
         "season": "",
         "episode": ""
+    },
+    {
+        "id": 21,
+        "name": "تیمی فلیر اشتباهاتی اتفاق افتاد",
+        "year": "2020",
+        "cover": "https://dlroozane.net/wp-content/uploads/2020/03/Timmy-Failure-Mistakes-Were-Made.jpg",
+        "URL": "http://s7.dlrozane.net/dlroozane/98/12/Timmy.Failure.Mistakes.Were.Made.2020.1080p.Farsi.Dubbed.mkv",
+        "brief": "پسری 11 ساله که معتقد است بهترین کارآگاه در شهر است، با بهترین دوست خود که یک خرس است به ماجراجویی می پردازد و …",
+        "trailer": "http://t1.dlrozane.net/dlroozane/98/12/Timmy.Failure.Mistakes.Were.Made.2020.mp4",
+        "rate": "6.2",
+        "genre": "ماجراجویی ، کمدی ، درام",
+        "isDubbed": true,
+        "isFavorite": false,
+        "season": "",
+        "episode": ""
     }
 ]
