@@ -134,7 +134,7 @@ body {
 /* Footer */
 
 .footer {
-    padding: 35px;
+    padding: 10px;
     font-size: 20px;
     text-align: center;
     background: #a5001f;
@@ -178,7 +178,7 @@ body {
 
 .content {
     position: absolute;
-    margin-top: -245px;
+    margin-top: -310px;
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
