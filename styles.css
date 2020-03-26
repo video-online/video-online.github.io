@@ -8,7 +8,7 @@
     src: url(timberline.woff2)
 }
 
-h1,h2,h3,h4,h5,h6{
+h1, h2, h3, h4, h5, h6 {
     font-family: iransans !important;
     /* line-height: 5 !important; */
 }
@@ -388,4 +388,10 @@ body {
     text-align: center;
     justify-self: center;
     padding: 5px;
+}
+
+.trailer-name {
+    direction: rtl;
+    text-align: right;
+    font-family: iransans;
 }
