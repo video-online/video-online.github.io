@@ -375,6 +375,12 @@ body {
     margin-right: 5px;
 }
 
+.play-button {
+    background-color: rgb(6, 74, 221);
+    width: 40px;
+    margin-right: 5px;
+}
+
 .movie-name {
     color: rgb(24, 37, 0);
     width: max-content;
