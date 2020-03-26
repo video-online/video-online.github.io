@@ -313,5 +313,20 @@
         "isFavorite": false,
         "season": "",
         "episode": ""
+    },
+    {
+        "id": 22,
+        "name": "شرلوک نومز",
+        "year": "2020",
+        "cover": "https://dlroozane.net/wp-content/uploads/2018/06/Sherlock-Gnomes-2.jpg",
+        "URL": "http://s5.dlrozane.net/dlroozane/97/03/Sherlock.Gnomes.2018.1080p.Farsi.Dubbed.mkv",
+        "brief": "ومئو و ژولیت، کارآگاه افسانه‌ای یعنی شرلوک گنومز را استخدام می‌کنند تا در مورد ناپدید شدن تعدادی از باغ‎های گنومز در لندن تحقیق کند و…",
+        "trailer": "http://s5.dlrozane.net/dlroozane/97/03/Sherlock%20Gnomes.mp4",
+        "rate": "5.0",
+        "genre": "انیمیشن | هیجان انگیز | کمدی",
+        "isDubbed": true,
+        "isFavorite": false,
+        "season": "",
+        "episode": ""
     }
 ]
