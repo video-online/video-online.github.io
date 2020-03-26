@@ -261,7 +261,8 @@ body {
 }
 
 .card {
-    background: rgb(242, 242, 242);;
+    background: rgb(242, 242, 242);
+    ;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -277,7 +278,7 @@ body {
 }
 
 .container {
-    padding: 2px 16px;
+    display: grid;
 }
 
 .container h4 {
@@ -363,4 +364,8 @@ body {
 
 .movie-name {
     color: rgb(24, 37, 0);
+    width: max-content;
+    text-align: center;
+    justify-self: center;
+    padding: 5px;
 }
