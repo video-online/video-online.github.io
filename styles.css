@@ -329,6 +329,10 @@ body {
     text-align: center;
 }
 
+.text h4 {
+    font-size: 18px;
+}
+
 .card-button {
     border-radius: 5px;
     border: none;
