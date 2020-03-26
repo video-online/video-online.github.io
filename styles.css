@@ -393,5 +393,5 @@ body {
 .trailer-name {
     direction: rtl;
     text-align: right;
-    font-family: iransans;
+    font-family: iransans !important;
 }
