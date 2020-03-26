@@ -10,7 +10,7 @@
 
 h1,h2,h3,h4,h5,h6{
     font-family: iransans !important;
-    line-height: 5 !important;
+    /* line-height: 5 !important; */
 }
 
 h4 {
