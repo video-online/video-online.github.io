@@ -124,6 +124,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
+    margin-right: 15px;
 }
 
 /* Fake image, just for this example */
@@ -303,7 +304,7 @@ body {
 
 .movie-cover {
     width: 100%;
-    height: 420px;
+    height: 440px;
 }
 
 .overlay {
