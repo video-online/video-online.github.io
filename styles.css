@@ -387,10 +387,8 @@ body {
 
 .movie-name {
     color: rgb(24, 37, 0);
-    width: max-content;
-    text-align: center;
-    justify-self: center;
-    padding: 5px;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
 }
 
 .trailer-name {
