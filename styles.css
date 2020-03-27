@@ -26,12 +26,14 @@ h5 {
     box-sizing: border-box !important;
 }
 
-/* Style the body */
+:root {
+    direction: rtl !important;
+}
 
+/* Style the body */
 body {
     margin: 0 !important;
     font-family: iransans !important;
-    direction: rtl !important;
     position: absolute;
 }
 
