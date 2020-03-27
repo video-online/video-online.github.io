@@ -32,7 +32,7 @@
     <script>
         function openWin(movieURL, posterURL = "https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg") {
             var myWindow = window.open();
-            myWindow.document.write(`<title>AK Movie</title><video src="${movieURL}" style="width:100%;height:100%" poster="${posterURL}" controls=""></video>`);
+            myWindow.document.write("<title>AK Movie</title><video src='" + movieURL + "' style='width:100%;height:100%' poster='" + posterURL + "' controls=''></video>");
         }
     </script>
 </head>
@@ -119,7 +119,7 @@
                 <div class="movies">
                     <!-- Movie Card -->
                     <div class="card persian"
-                        onclick="openWin('http://s5.dlrozane.net/dlroozane/97/03/Sherlock.Gnomes.2018.1080p.Farsi.Dubbed.mkv')">
+                        onclick="openWin('http://s5.dlrozane.net/dlroozane/97/03/Sherlock.Gnomes.2018.1080p.Farsi.Dubbed.mkv');">
                         <img src="https://dlroozane.net/wp-content/uploads/2018/06/Sherlock-Gnomes-2.jpg"
                             class="movie-cover">
                         <div class="overlay">
@@ -680,6 +680,12 @@
         $(document).ready(function () {
             $('body').persianNum();
         })
+    </script>
+    <script>
+        function openWin(movieURL, posterURL = "https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg") {
+            var myWindow = window.open();
+            myWindow.document.write("<title>AK Movie</title><video src='" + movieURL + "' style='width:100%;height:100%' poster='" + posterURL + "' controls=''></video>");
+        }
     </script>
 </body>
 

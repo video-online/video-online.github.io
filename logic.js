@@ -13,7 +13,7 @@ function loadJSON(callback) {
 
 function openWin(movieURL, posterURL = "https://inspirecast.ca/wp-content/uploads/2016/01/Robert-Kiyosaki-The-only-difference-between-a-rich-person-and-poor-person-is-how-they-use-their-time.jpg") {
     var myWindow = window.open();
-    myWindow.document.write(`<title>AK Movie</title><video src="${movieURL}" style="width:100%;height:100%" poster="${posterURL}" controls=""></video>`);
+    myWindow.document.write("<title>AK Movie</title><video src='" + movieURL + "' style='width:100%;height:100%' poster='" + posterURL + "' controls=''></video>");
 }
 
 function movieExtractor(response) {
