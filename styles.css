@@ -354,17 +354,24 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 17px;
+    transition: .7s ease;
+    border: 2px solid rgba(0, 0, 0, 0.356);
 }
 
 .button-icon-with-text {
-    font-size: 21px;
+    font-size: 23px;
     margin-right: 8px;
     vertical-align: sub;
 }
 
 .button-icon-without-text {
-    font-size: 20px;
+    font-size: 22px;
     vertical-align: sub;
+}
+
+.card-button:hover {
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .trailer-button {
@@ -382,6 +389,7 @@ body {
 .play-button {
     background-color: rgb(6, 74, 221);
     width: 40px;
+    font-weight: bold;
     margin-left: 5px;
     margin-right: 5px;
 }
